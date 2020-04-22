@@ -1,12 +1,15 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 
 class Counter extends React.Component {
     render = () => {
+
         return (
+
             <div className="counter"  >
-                <span classname='user'> <b> User: </b> </span> {this.props.count}
+                <span className='user'>  Yuo can:   </span> {(this.props.count)%10}
             </div>
+
         );
     }
 }
