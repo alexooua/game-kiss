@@ -5,7 +5,6 @@ import logo from "./../img/1.jpg";
 
 class Item extends React.Component {
     render = () => {
-
         let classForItem = this.props.index === this.props.id ? 'photo show' : 'photo'
 
         return (
