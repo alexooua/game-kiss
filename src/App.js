@@ -4,89 +4,95 @@ import Counter from './componets/Counter';
 import sound from './sound/kiss.mp3';
 import UIfx from 'uifx';
 import Item from "./componets/Item";
-import win from "./img/1.jpg";
+import win from "./img/win.png"
+
 
 
 class App extends React.Component {
 
 
-    componentDidMount() {
-        setInterval(() => {
-            debugger
-                this.getRandomImageIndex()
-            },
-            this.state.second
-        );
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-    }
-
     state = {
         item: [{}, {}, {}, {}, {}, {}, {}, {}, {},],
         index: 1,
         count: 0,
-        second: 1000
+        second: 1000,
+        hideImg: true
     };
 
+    yo
 
-    onUpSecond = () => {
-        let newSecond = {second: this.state.second-100}
+    componentDidMount() {
+        this.setNewInterval(this.state.second)
 
-        this.setState(newSecond, ()=>{console.log(this.state.second)})
-        console.log(this.state.second)
+    }
+
+    setNewInterval = (second) => {
+        clearInterval(this.yo)
+        this.yo = setInterval(() => {
+                this.getRandomImageIndex()
+                this.setState({hideImg: true})
+
+            },
+            second);
     }
 
 
     getRandomImageIndex = () => {
-
         let getIndex = Math.floor(Math.random() * 9);
         this.setState({index: getIndex}
         )
     };
-
-
-
     itemOnClick = () => {
-        // this.onUpSecond()
-
+        let newSecond = this.state.second - 10;
         let newCount = this.state.count + 1;
-        this.setState({count: newCount, second:this.state.second - 1000});
+        this.setState({count: newCount, hideImg: false, second: newSecond},
+            () => {
+                this.setNewInterval(newSecond)
+            }
+        );
+
         let tick = new UIfx(sound)
         tick.play();
-    };
-    onClickAgain=()=>{
+    }
+    onClickAgain = () => {
+      //  this.setState({})
+        clearInterval(this.yo)
         this.setState({
-            item: [{}, {}, {}, {}, {}, {}, {}, {}, {},],
             index: 1,
             count: 0,
-            second: 1000
-        });
-    }
+            second: 1000,
+            hideImg: false
+        }, () => {
+            this.setNewInterval(this.state.second)
+        })
 
+    }
     render = () => {
 
         let items = this.state.item.map((item, i) => {
 
             return <Item key={i} id={i + 1}
                          index={this.state.index}
-                         itemOnClick={this.itemOnClick}/>
+                         itemOnClick={this.itemOnClick}
+                         hideImg={this.state.hideImg}/>
         })
 
         return (
             <div className='App'>
-                <div className='text'><span className="hom">На память о нашем первом IT-REACT-SAMURAI-ПРЕПОДАВАТЕЛЕ, спасибо тебе за твою
+                <div className="five"><p><span>На память о нашем первом IT-REACT-SAMURAI-ПРЕПОДАВАТЕЛЕ, спасибо тебе за твою
                     упорную и старательную работу, за то что всегда,<br/>
                     влюбом вопросе помагаеш нам и решаешь нашие самые тупейшие ошибки, благодарочка от всего
                     сердца!!!</span><br/><br/>
                     <span className="do">Целуй его в лоб и ты будеш програмистом!!!<br/>
-                    Чмокни Виктора 50 раз, пройди свой путь самурая!!!</span>
-                    <br/><br/> =>
-                    {this.state.count >= 1 && <span className="skill">HTML </span>}
-                    {this.state.count >= 2 && <span className="skill">+ CSS </span>}
-                    {this.state.count >= 3 && <span className="skill">+ JS </span>}
-                    {this.state.count >= 4 && <span className="skill">+ REACT </span>}
-                    {this.state.count >= 5 && <span className="skill">+ NODE </span>}
+                    Чмокни Виктора 60 раз, пройди свой путь самурая!!!</span>
+                </p></div>
+                <div className='text'>
+                    =>
+                    {this.state.count >= 10 && <div className="one"><h1>HTML</h1></div>}
+                    {this.state.count >= 20 && <div className="one"><h1>CSS</h1></div>}
+                    {this.state.count >= 30 && <div className="one"><h1>JS</h1></div>}
+                    {this.state.count >= 40 && <div className="one"><h1>REACT</h1></div>}
+                    {this.state.count >= 50 && <div className="one"><h1>NODE</h1></div>}
 
                 </div>
 
@@ -95,16 +101,15 @@ class App extends React.Component {
                 </div>
 
                 <Counter count={this.state.count}/>
-                {/*{this.state.count >= 6 &&*/}
-                {/*<div className="win"><img src={win} alt=""/>*/}
-                {/*    <video controls="" autoPlay="" name="media">*/}
-                {/*        <source*/}
-                {/*            src="https://cdn.dribbble.com/users/662463/screenshots/3281817/rolling_chair_reel_monchomasse.gif?vid=1"*/}
-                {/*            type="video/mp4"/>*/}
-                {/*    </video>*/}
-                {/*    <button onClick={this.onClickAgain}>again</button>*/}
-                {/*</div>*/}
-                {/*}*/}
+                {this.state.count >= 60 &&
+                <div className="win">
+                    <img src={win} alt=""/>
+
+                    <div className="six"><h1><span>Congratulation !!!
+                        <br/>You are the best developer in the world.</span></h1></div>
+                    <a href="" onClick={this.onClickAgain}>Again?</a>
+                </div>
+                }
             </div>
         );
     }

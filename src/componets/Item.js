@@ -5,14 +5,17 @@ import logo from "./../img/1.jpg";
 
 class Item extends React.Component {
     render = () => {
-        let classForItem = this.props.index === this.props.id ? 'photo show' : 'photo'
 
+        let classForItem = this.props.index === this.props.id ? 'photo show' : 'photo'
+// debugger
         return (
 
-            <div className="item"  >
-                <img src={logo} alt=''
-                     className={classForItem}
-                     onClick={this.props.itemOnClick}/>
+            <div className="item">
+                {this.props.hideImg ? <img src={logo} alt=''
+                                            className={classForItem}
+                                            onClick={this.props.itemOnClick}/>:""}
+
+
             </div>
         );
     }

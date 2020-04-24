@@ -1,15 +1,16 @@
 .wrapper {
-  width: 170px;
+  width: 225px;
   margin: 15px auto 10px auto;
 }
 .item {
   border: 1px solid grey;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   text-align: center;
   overflow: hidden;
   display: inline-block;
+
 }
 
 .photo {
@@ -19,6 +20,7 @@
 }
 
 .show {
+  cursor: url(./img/cursor.cur), pointer;
   visibility: visible;
 }
 
@@ -27,12 +29,17 @@
 }
 
 .text {
-  color: red;
+  display: flex;
+  justify-content: center;
+  color: blue;
   text-align: center;
+  align-items: center;
+  height: 45px;
+
 }
 
 .do {
-  color: #b31fef;
+  color: #343e86;
 }
 
 .hom {
@@ -50,7 +57,221 @@
   top: 0;
   width: 100%;
   height: 100%;
-  display: block;
+
   z-index: 99999999;
   visibility: visible;
+  display: grid;
+  grid-template-rows: 2fr 2fr 2fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.win > a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 12px 40px;
+  margin: 10px 20px;
+  border-radius: 30px;
+  background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+  box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+  transition: .5s;
+}
+
+a:hover {
+  box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+  background-position: 0 0;
+}
+
+.one {
+  background: #FFF4ED;
+
+}
+
+.one h1 {
+  width: 100px;
+
+  font-family: 'Righteous', cursive;
+  position: relative;
+  color: #3CA1D9;
+  display: inline-block;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 1em;
+  padding: 11px 60px;
+  margin: 0;
+  line-height: 1;
+}
+
+.one h1:before, .one h1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background: repeating-linear-gradient(180deg, transparent, transparent 2px, #3CA1D9 2px, #3CA1D9 4px);
+}
+
+.one h1:before {
+  left: 0;
+}
+
+.one h1:after {
+  right: 0;
+}
+
+@media (max-width: 420px) {
+  .one h1 {
+    font-size: 2em;
+  }
+}
+
+.five {
+  background: #dff3fd;
+  padding: 50px 20px 50px 170px;
+  text-align: center;
+}
+
+.five p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  position: relative;
+  color: #587493;
+  font-weight: normal;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  padding: 8px 20px 8px 2px;
+  border-top: 4px solid;
+}
+
+.five p:before {
+  content: "YO";
+  position: absolute;
+  top: -10px;
+  left: -160px;
+  transform: rotate(-25deg);
+  font-family: 'Marck Script', cursive;
+}
+
+.five p:after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 4px;
+  right: 0;
+  bottom: -4px;
+  background: #587493;
+}
+
+@media (max-width: 580px) {
+  .five {
+    padding-left: 130px;
+  }
+
+  .five h3:before {
+    left: -130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .five {
+    padding-left: 100px;
+  }
+
+  .five p {
+    padding-right: 10px;
+  }
+
+  .five p:before {
+    left: -100px;
+  }
+}
+
+@media (max-width: 380px) {
+  .five {
+    padding-left: 90px;
+  }
+
+  .five p:before {
+    left: -88px;
+  }
+}
+
+.six {
+  background: #c7ccf7;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.six h1 {
+  font-weight: normal;
+  font-family: 'Merriweather', serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  color: #F7844E;
+  font-size: 40px;
+  padding: .4em 1em .55em;
+}
+
+.six h1:before,
+.six h1:after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: .1em;
+  background: #294200;
+}
+
+.six h1:before {
+  left: 0;
+  top: 0;
+}
+
+.six h1:after {
+  right: 0;
+  bottom: 0;
+}
+
+.six h1 span:before,
+.six h1 span:after {
+  content: "";
+  position: absolute;
+  width: .65em;
+  height: .65em;
+  border: .1em solid #294200;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.six h1 span:before {
+  top: -.55em;
+  left: -.325em;
+}
+
+.six h1 span:after {
+  bottom: -.55em;
+  right: -.325em;
+}
+
+@media (max-width: 600px) {
+  .six h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 450px) {
+  .six h1 {
+    font-size: 1.5em;
+  }
 }
