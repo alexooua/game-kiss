@@ -87,9 +87,9 @@ class App extends React.Component {
 
         return (
             <div className='App'>
-                <div className="five"><p><span>Пройди путь самурая FRONT-AND SAMURAI, УСОВЕРШЕНСТВУЙ СВОИ НАВЫКИ!!!</span><br/><br/>
+                <div className="five"><p><span>Пройди путь самурая FRONTEND SAMURAI, УСОВЕРШЕНСТВУЙ СВОИ НАВЫКИ!!!</span><br/><br/>
                     <span className="do">Поруби все баги на своём пути!!!<br/>
-                    Уничтож чудовище 60 раз, пройди свой путь самурая!!!</span>
+                    Уничтож чудовище 60 раз, пройди свой путь !!!</span>
                 </p></div>
                 <div className='text'>
                     =>
