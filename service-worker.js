@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/game-kiss/precache-manifest.341fb423dc7170ab3ac24d091ecaab4c.js"
+  "/game-kiss/precache-manifest.dc7681e47f42e244186438ab8f709f7f.js"
 );
 
 self.addEventListener('message', (event) => {
