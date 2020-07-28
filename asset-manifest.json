@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/game-kiss/static/css/main.82f9b8fa.chunk.css",
-    "main.js": "/game-kiss/static/js/main.814aafef.chunk.js",
-    "main.js.map": "/game-kiss/static/js/main.814aafef.chunk.js.map",
+    "main.js": "/game-kiss/static/js/main.c9c162ea.chunk.js",
+    "main.js.map": "/game-kiss/static/js/main.c9c162ea.chunk.js.map",
     "runtime-main.js": "/game-kiss/static/js/runtime-main.c31239e2.js",
     "runtime-main.js.map": "/game-kiss/static/js/runtime-main.c31239e2.js.map",
     "static/js/2.5f3d6d2c.chunk.js": "/game-kiss/static/js/2.5f3d6d2c.chunk.js",
     "static/js/2.5f3d6d2c.chunk.js.map": "/game-kiss/static/js/2.5f3d6d2c.chunk.js.map",
     "index.html": "/game-kiss/index.html",
-    "precache-manifest.86ca2b5c9549027679f037e041e37f1b.js": "/game-kiss/precache-manifest.86ca2b5c9549027679f037e041e37f1b.js",
+    "precache-manifest.341fb423dc7170ab3ac24d091ecaab4c.js": "/game-kiss/precache-manifest.341fb423dc7170ab3ac24d091ecaab4c.js",
     "service-worker.js": "/game-kiss/service-worker.js",
     "static/css/main.82f9b8fa.chunk.css.map": "/game-kiss/static/css/main.82f9b8fa.chunk.css.map",
     "static/js/2.5f3d6d2c.chunk.js.LICENSE.txt": "/game-kiss/static/js/2.5f3d6d2c.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.c31239e2.js",
     "static/js/2.5f3d6d2c.chunk.js",
     "static/css/main.82f9b8fa.chunk.css",
-    "static/js/main.814aafef.chunk.js"
+    "static/js/main.c9c162ea.chunk.js"
   ]
 }
