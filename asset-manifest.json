@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/game-kiss/static/css/main.524b0fa0.chunk.css",
-    "main.js": "/game-kiss/static/js/main.5920f33c.chunk.js",
-    "main.js.map": "/game-kiss/static/js/main.5920f33c.chunk.js.map",
+    "main.css": "/game-kiss/static/css/main.82f9b8fa.chunk.css",
+    "main.js": "/game-kiss/static/js/main.814aafef.chunk.js",
+    "main.js.map": "/game-kiss/static/js/main.814aafef.chunk.js.map",
     "runtime-main.js": "/game-kiss/static/js/runtime-main.c31239e2.js",
     "runtime-main.js.map": "/game-kiss/static/js/runtime-main.c31239e2.js.map",
-    "static/js/2.ce5eb2a0.chunk.js": "/game-kiss/static/js/2.ce5eb2a0.chunk.js",
-    "static/js/2.ce5eb2a0.chunk.js.map": "/game-kiss/static/js/2.ce5eb2a0.chunk.js.map",
+    "static/js/2.5f3d6d2c.chunk.js": "/game-kiss/static/js/2.5f3d6d2c.chunk.js",
+    "static/js/2.5f3d6d2c.chunk.js.map": "/game-kiss/static/js/2.5f3d6d2c.chunk.js.map",
     "index.html": "/game-kiss/index.html",
-    "precache-manifest.7b744c754a2aad7520b120801047c3c5.js": "/game-kiss/precache-manifest.7b744c754a2aad7520b120801047c3c5.js",
+    "precache-manifest.86ca2b5c9549027679f037e041e37f1b.js": "/game-kiss/precache-manifest.86ca2b5c9549027679f037e041e37f1b.js",
     "service-worker.js": "/game-kiss/service-worker.js",
-    "static/css/main.524b0fa0.chunk.css.map": "/game-kiss/static/css/main.524b0fa0.chunk.css.map",
-    "static/js/2.ce5eb2a0.chunk.js.LICENSE.txt": "/game-kiss/static/js/2.ce5eb2a0.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/game-kiss/static/media/cursor.82c2b693.cur",
-    "static/media/kiss.mp3": "/game-kiss/static/media/kiss.68f6e5cc.mp3"
+    "static/css/main.82f9b8fa.chunk.css.map": "/game-kiss/static/css/main.82f9b8fa.chunk.css.map",
+    "static/js/2.5f3d6d2c.chunk.js.LICENSE.txt": "/game-kiss/static/js/2.5f3d6d2c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/game-kiss/static/media/Basic.19f14928.cur",
+    "static/media/Cy-BugProfile.png": "/game-kiss/static/media/Cy-BugProfile.9da22213.png",
+    "static/media/sword_swing_fast_whoo_003.mp3": "/game-kiss/static/media/sword_swing_fast_whoo_003.0ac3dd85.mp3",
+    "static/media/zaglavnaja-tema-mortal-kombat-8-bit.mp3": "/game-kiss/static/media/zaglavnaja-tema-mortal-kombat-8-bit.2a5d7853.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.c31239e2.js",
-    "static/js/2.ce5eb2a0.chunk.js",
-    "static/css/main.524b0fa0.chunk.css",
-    "static/js/main.5920f33c.chunk.js"
+    "static/js/2.5f3d6d2c.chunk.js",
+    "static/css/main.82f9b8fa.chunk.css",
+    "static/js/main.814aafef.chunk.js"
   ]
 }
