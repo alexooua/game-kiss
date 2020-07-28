@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Counter from './componets/Counter';
-import sound from './sound/kiss.mp3';
+import sound from './sound/sword_swing_fast_whoo_003.mp3';
+import winSound from './sound/zaglavnaja-tema-mortal-kombat-8-bit.mp3';
 import UIfx from 'uifx';
 import Item from "./componets/Item";
 import win from "./img/win.png"
@@ -42,7 +43,12 @@ class App extends React.Component {
         this.setState({index: getIndex}
         )
     };
+    winS=()=>{
+        let winS = new UIfx(winSound)
+        winS.play();
+    }
     itemOnClick = () => {
+        this.state.count ===59 && this.winS()
         let newSecond = this.state.second - 10;
         let newCount = this.state.count + 1;
         this.setState({count: newCount, hideImg: false, second: newSecond},
@@ -54,6 +60,7 @@ class App extends React.Component {
         let tick = new UIfx(sound)
         tick.play();
     }
+
     onClickAgain = () => {
       //  this.setState({})
         clearInterval(this.yo)
@@ -64,6 +71,7 @@ class App extends React.Component {
             hideImg: false
         }, () => {
             this.setNewInterval(this.state.second)
+            let winS =null
         })
 
     }
@@ -79,12 +87,9 @@ class App extends React.Component {
 
         return (
             <div className='App'>
-                <div className="five"><p><span>На память о нашем первом IT-REACT-SAMURAI-ПРЕПОДАВАТЕЛЕ, спасибо тебе за твою
-                    упорную и старательную работу, за то что всегда,<br/>
-                    влюбом вопросе помагаеш нам и решаешь нашие самые тупейшие ошибки, благодарочка от всего
-                    сердца!!!</span><br/><br/>
-                    <span className="do">Целуй его в лоб и ты будеш програмистом!!!<br/>
-                    Чмокни Виктора 60 раз, пройди свой путь самурая!!!</span>
+                <div className="five"><p><span>Пройди путь самурая FRONT-AND SAMURAI, УСОВЕРШЕНСТВУЙ СВОИ НАВЫКИ!!!</span><br/><br/>
+                    <span className="do">Поруби все баги на своём пути!!!<br/>
+                    Уничтож чудовище 60 раз, пройди свой путь самурая!!!</span>
                 </p></div>
                 <div className='text'>
                     =>
@@ -101,7 +106,7 @@ class App extends React.Component {
                 </div>
 
                 <Counter count={this.state.count}/>
-                {this.state.count >= 60 &&
+                {this.state.count >=60 &&
                 <div className="win">
                     <img src={win} alt=""/>
 

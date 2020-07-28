@@ -20,7 +20,7 @@
 }
 
 .show {
-  cursor: url(./img/cursor.cur), pointer;
+  cursor: url(./img/Basic.cur), pointer;
   visibility: visible;
 }
 

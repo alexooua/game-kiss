@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import logo from "./../img/1.jpg";
+import logo from "./../img/Cy-BugProfile.png";
 
 
 class Item extends React.Component {
@@ -14,7 +14,6 @@ class Item extends React.Component {
                 {this.props.hideImg ? <img src={logo} alt=''
                                             className={classForItem}
                                             onClick={this.props.itemOnClick}/>:""}
-
 
             </div>
         );
